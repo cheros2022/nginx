@@ -9,15 +9,11 @@ jobs:
   deploy: 
     runs-on: ubuntu latest
     steps:  
-    - uses: appleboy/ssh-action@v1
-      with: 
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
-        password: ${{ secrets.PASSWORD }}
-        port: ${{ secrets.PORT }}
-        script: |
-          cd /var/www/html/
-          wget: https://codeload.github.com/cheros2022/nginx/zip/refs/heads/main
-          tar -zxvf nginx-main.zip
-          mv ./nginx-main/* .
-          rm -fr nginx-main
+    - uses: actions/checkout@v1
+    - name: run script
+      run: echo Hello,world!!!
+    - name: run script 2
+      run: |
+        echo hello!
+        echo cheros!!!
+
