@@ -9,9 +9,7 @@ jobs:
   deploy: 
     runs-on: ubuntu latest
     
-    steps: 
-
-      
+    steps:  
     - name: deploy
       uses: appleboy/ssh-action@master
       with: 
